@@ -4,16 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kasie Nguyen | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<h1>Kasie Nguyen</h1>
-<p>Portfolio coming soon. 🚀</p>
 
-<h2>Projects</h2>
-<ul>
-    <li>Boost Converter</li>
-    <li>CRUD App (JavaFX)</li>
-    <li>Simple CPU (VHDL)</li>
-</ul>
+<body>
+<header class="header">
+    <div class="container">
+        <h1>Kasie Nguyen</h1>
+        <p class="subtitle">
+            Computer & Electrical Engineering student — projects in software + hardware.
+        </p>
+        <div class="links">
+            <a href="mailto:kasiengu@gmail.com">kasiengu@gmail.com</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/kasie-nguyen" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span>•</span>
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section>
+        <h2>Projects</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Boost Converter</h3>
+                <p class="meta">KiCad • PCB • PWM • oscilloscope testing</p>
+                <p class="desc">Designed and tested a DC–DC boost converter with PWM control.</p>
+                <div class="card-links">
+                    <a href="#" target="_blank" rel="noreferrer">Repo</a>
+                    <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>CRUD App (JavaFX)</h3>
+                <p class="meta">Java • JavaFX • SQLite (JDBC)</p>
+                <p class="desc">Course review app with login, search, reviews, and persistence.</p>
+                <div class="card-links">
+                    <a href="#" target="_blank" rel="noreferrer">Repo</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Simple CPU (VHDL)</h3>
+                <p class="meta">VHDL • Quartus II • CPU architecture</p>
+                <p class="desc">Built a simple CPU with an 8-bit datapath and control unit.</p>
+                <div class="card-links">
+                    <a href="#" target="_blank" rel="noreferrer">Repo</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <small>© <span id="year"></span> Kasie Nguyen</small>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
