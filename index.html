@@ -4,123 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kasie Nguyen | Portfolio</title>
+    <meta name="description" content="Kasie Nguyen — computer and electrical engineering student. Projects in software, hardware, embedded systems, and signal processing." />
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-<header class="header">
+<a class="skip" href="#projects">Skip to projects</a>
+
+<header class="masthead">
     <div class="container">
-        <h1>Kasie Nguyen</h1>
-        <p class="subtitle">
-            Computer & Electrical Engineering student — projects in software, hardware, embedded systems, and signal processing.
+        <h1 class="name">Kasie Nguyen</h1>
+        <p class="role">
+            Computer &amp; Electrical Engineering student — projects in software, hardware,
+            embedded systems, and signal processing.
         </p>
-        <div class="links">
-            <a href="mailto:kasiengu@gmail.com">kasiengu@gmail.com</a>
-            <span>•</span>
-            <a href="https://www.linkedin.com/in/kasie-nguyen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <span>•</span>
-            <a href="https://github.com/glyckz" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
+        <ul class="contact">
+            <li><a href="mailto:kasiengu@gmail.com">kasiengu@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/kasie-nguyen" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/glyckz" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
     </div>
 </header>
 
-<main class="container">
-    <section>
-        <h2>Projects</h2>
+<main class="container" id="projects">
+    <section aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">Projects</h2>
 
-        <div class="grid">
-            <article class="card">
-                <h3>Boost Converter</h3>
-                <p class="meta">KiCad • PCB • PWM • oscilloscope testing</p>
-                <p class="desc">
+        <ol class="index">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">01</span>
+                <h3 class="project__title">Boost Converter</h3>
+                <p class="project__stack">KiCad · PCB · PWM · Oscilloscope testing</p>
+                <p class="project__desc">
                     Designed a PWM-controlled DC–DC boost converter and documented its
                     performance through KiCad simulation, PCB design, oscilloscope testing,
                     and bench measurements.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/boost-converter-project" target="_blank" rel="noopener noreferrer">Repo</a>
                     <a href="https://raw.githubusercontent.com/glyckz/boost-converter-project/main/docs/boost-converter-final-report.pdf"
-                       target="_blank" rel="noopener noreferrer">Final Report (PDF)</a>
-                </div>
-            </article>
+                       target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+                </p>
+            </li>
 
-            <article class="card">
-                <h3>Audio Analyzer</h3>
-                <p class="meta">KiCad • analog circuits • filters • PCB • LED drivers</p>
-                <p class="desc">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">02</span>
+                <h3 class="project__title">Audio Analyzer</h3>
+                <p class="project__stack">KiCad · Analog circuits · Filters · PCB · LED drivers</p>
+                <p class="project__desc">
                     Built an analog audio analyzer that mixes stereo input, separates the
                     signal into low- and high-frequency bands with Sallen-Key filters, and
                     drives LEDs using peak detection, PWM, and MOSFET driver circuits.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/Audio-Analyzer-Project" target="_blank" rel="noopener noreferrer">Repo</a>
                     <a href="https://raw.githubusercontent.com/glyckz/Audio-Analyzer-Project/main/docs/Audio_Analyzer_Final_Report_Kasie_Nguyen.pdf"
-                       target="_blank" rel="noopener noreferrer">Final Report (PDF)</a>
-                </div>
-            </article>
+                       target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+                </p>
+            </li>
 
-            <article class="card">
-                <h3>Embedded C Music Player</h3>
-                <p class="meta">Embedded C • PWM • interrupts • LCD • MKII BoosterPack</p>
-                <p class="desc">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">03</span>
+                <h3 class="project__title">Embedded C Music Player</h3>
+                <p class="project__stack">Embedded C · PWM · Interrupts · LCD · MKII BoosterPack</p>
+                <p class="project__desc">
                     Developed an embedded music player on the MSPM0G3507 LaunchPad and
                     MKII Educational BoosterPack that plays “La Vie En Rose” through a
                     PWM-controlled buzzer, displays note labels on the LCD, and uses
                     interrupt-driven pushbuttons for start, pause, and resume control.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/Embedded-C-Music-Player" target="_blank" rel="noopener noreferrer">Repo</a>
                     <a href="https://raw.githubusercontent.com/glyckz/Embedded-C-Music-Player/main/docs/ECE3430_Final_Report.pdf"
-                       target="_blank" rel="noopener noreferrer">Final Report (PDF)</a>
-                </div>
-            </article>
+                       target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+                </p>
+            </li>
 
-            <article class="card">
-                <h3>BEATS Audio Equalizer</h3>
-                <p class="meta">Python • Google Colab • FFT • audio visualization • convolution</p>
-                <p class="desc">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">04</span>
+                <h3 class="project__title">BEATS Audio Equalizer</h3>
+                <p class="project__stack">Python · Google Colab · FFT · Audio visualization · Convolution</p>
+                <p class="project__desc">
                     Collaborated on a Google Colab audio equalizer that analyzes WAV audio
                     in the frequency domain, supports bass/mid/treble manipulation,
                     reconstructs modified audio, and includes visualization,
                     parameter-summary export, and convolution reverb features.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/BEATS-Audio-Equalizer" target="_blank" rel="noopener noreferrer">Repo</a>
-                </div>
-            </article>
+                </p>
+            </li>
 
-            <article class="card">
-                <h3>CRUD App (JavaFX)</h3>
-                <p class="meta">Java • JavaFX • SQLite (JDBC)</p>
-                <p class="desc">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">05</span>
+                <h3 class="project__title">CRUD App (JavaFX)</h3>
+                <p class="project__stack">Java · JavaFX · SQLite (JDBC)</p>
+                <p class="project__desc">
                     Built a JavaFX course review application with a database-backed
                     architecture, including course data handling, review management,
                     controller logic, and persistent storage through JDBC.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/CRUD-app-2025" target="_blank" rel="noopener noreferrer">Repo</a>
-                </div>
-            </article>
+                </p>
+            </li>
 
-            <article class="card">
-                <h3>Simple CPU (VHDL)</h3>
-                <p class="meta">VHDL • Quartus Prime • ModelSim • CPU architecture</p>
-                <p class="desc">
+            <li class="project">
+                <span class="project__num" aria-hidden="true">06</span>
+                <h3 class="project__title">Simple CPU (VHDL)</h3>
+                <p class="project__stack">VHDL · Quartus Prime · ModelSim · CPU architecture</p>
+                <p class="project__desc">
                     Implemented an 8-bit simple CPU in VHDL with an 8-instruction ISA,
                     datapath, ALU, control unit, and memory interface, then verified the
                     design using RTL simulation in ModelSim.
                 </p>
-                <div class="card-links">
+                <p class="project__links">
                     <a href="https://github.com/glyckz/simplecpuproject" target="_blank" rel="noopener noreferrer">Repo</a>
-                </div>
-            </article>
-        </div>
+                </p>
+            </li>
+        </ol>
     </section>
 </main>
 
 <footer class="footer">
     <div class="container">
-        <small>© <span id="year"></span> Kasie Nguyen</small>
+        © <span id="year">2026</span> Kasie Nguyen
     </div>
 </footer>
 
