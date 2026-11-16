@@ -20,9 +20,9 @@
         <nav aria-label="Sections">
             <ul class="nav__links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -91,97 +91,162 @@
                     <p class="edu__school">University of Virginia</p>
                     <p class="edu__degree">B.S. in Computer Engineering</p>
                     <p class="edu__degree">B.S. in Electrical Engineering</p>
-                    <p class="edu__date">Expected May 2028 · GPA 3.88</p>
-                    <h4 class="edu__sub">Relevant coursework</h4>
-                    <ul class="edu__courses">
-                        <li><span class="edu__code">ECE 3430</span> Introduction to Embedded Computer Systems</li>
-                        <li><span class="edu__code">ECE 2300</span> Applied Circuits</li>
-                        <li><span class="edu__code">ECE 2600</span> Electronics</li>
-                        <li><span class="edu__code">ECE 4435</span> Computer Architecture &amp; Design <span class="edu__note">In progress, Spring 2027</span></li>
-                        <li><span class="edu__code">ECE 4209</span> RF Circuit Design &amp; Wireless Systems <span class="edu__note">In progress, Spring 2027</span></li>
-                    </ul>
+                    <p class="edu__date">Class of 2028</p>
                 </aside>
             </div>
         </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section" id="experience" aria-labelledby="experience-title">
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="container">
             <div class="section__head">
-                <p class="eyebrow">Experience</p>
-                <h2 class="section__title" id="experience-title">Experience &amp; activities</h2>
+                <p class="eyebrow">Projects</p>
+                <h2 class="section__title" id="projects-title">Selected work</h2>
             </div>
 
-            <div class="exp">
-                <div>
-                    <h3 class="exp__label">Experience</h3>
-                    <ol class="timeline">
-                        <li class="role">
-                            <div class="role__head">
-                                <h4 class="role__title">Electrical Engineering Intern</h4>
-                                <span class="role__date">Aug 2026 – Present</span>
+            <ol class="featured">
+                <li class="project project--featured" style="--c: var(--copper)">
+                    <div class="project__main">
+                        <p class="project__meta"><span class="project__num" aria-hidden="true">01</span><span>Hardware · Featured</span></p>
+                        <h3 class="project__title">Boost Converter PCB</h3>
+                        <p class="project__context">Applied Circuits · Team project · Fall 2025</p>
+                        <ul class="tags" aria-label="Tools">
+                            <li>KiCad</li><li>KiCad SPICE</li><li>PCB</li><li>PWM</li><li>555 timer</li><li>Oscilloscope testing</li>
+                        </ul>
+                    </div>
+                    <div class="project__side">
+                        <p class="project__desc">
+                            A PWM-controlled DC–DC converter that steps 5 V up to 12 V. I designed
+                            the PCB in KiCad, simulated it, assembled the board, and debugged it on
+                            the bench until it met spec.
+                        </p>
+                        <dl class="stats">
+                            <div>
+                                <dt>Output voltage</dt>
+                                <dd>11.57 V</dd>
+                                <dd class="stats__note">12 V target from 5 V in, within 3.6%</dd>
                             </div>
-                            <p class="role__org">Jerico Technologies LLC · Remote</p>
-                            <p class="role__desc">Building a modular weather station with ESP32.</p>
-                            <!-- Kept at the general level Jerico's contract allows: no pin numbers, part numbers, or formulas -->
-                            <ul class="role__list">
-                                <li>Brought up an ESP32 (T-Beam) weather station platform and a PlatformIO development environment, resolving GPIO/ADC pin conflicts before assigning pins to sensors.</li>
-                                <li>Validated a WiFi-to-HTTP data pipeline against a Python receiving server before introducing live sensor data.</li>
-                                <li>Integrating I2C environmental and analog wind sensors, validating each on the bench with a function generator and multimeter, and designing signal conditioning (voltage divider and input filtering) to keep the analog signal within the microcontroller's input range.</li>
-                                <li>Writing C++ firmware that sends JSON readings over HTTP, paired with a Python logging app that saves readings to CSV, and hardening it with WiFi reconnect-with-backoff and retry logic.</li>
-                                <li>Producing a KiCad wiring diagram and installation, calibration, and quickstart documentation for client handoff.</li>
-                            </ul>
-                        </li>
-                        <li class="role">
-                            <div class="role__head">
-                                <h4 class="role__title">Technology Developer Intern</h4>
-                                <span class="role__date">Jun – Aug 2026</span>
+                            <div>
+                                <dt>PWM frequency</dt>
+                                <dd>500.06 Hz</dd>
+                                <dd class="stats__note">500 Hz target, within 0.02%</dd>
                             </div>
-                            <p class="role__org">i.Lab Incubator, Batten Institute, Darden School of Business (UVA) · Remote</p>
-                            <p class="role__desc">
-                                Worked with two ventures: Ascend Mental Performance (Product &amp;
-                                Solutions Fellow) and Aro by D1 Solutions.
-                            </p>
-                        </li>
-                        <li class="role">
-                            <div class="role__head">
-                                <h4 class="role__title">Teaching Assistant, Ordinary Differential Equations</h4>
-                                <span class="role__date">Aug 2025 – Present</span>
-                            </div>
-                            <p class="role__org">University of Virginia</p>
-                            <ul class="role__list">
-                                <li>Support 46 students with 5 hours a week of concept explanations and solution troubleshooting, plus weekly office hours.</li>
-                                <li>Grade 3 assignments a week against standardized rubrics for consistent, fair technical feedback.</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
+                        </dl>
+                        <p class="project__links">
+                            <a class="btn" href="https://github.com/glyckz/boost-converter-project" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                            <a class="btn" href="https://raw.githubusercontent.com/glyckz/boost-converter-project/main/docs/boost-converter-final-report.pdf"
+                               target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                        </p>
+                    </div>
+                </li>
 
-                <div>
-                    <h3 class="exp__label">Activities</h3>
-                    <ul class="activities">
-                        <li>
-                            <span class="activity__title">New Member Educator and Scribe</span>
-                            <span class="activity__org">Theta Tau Professional Engineering Fraternity</span>
-                            <span class="activity__date">Jan 2026 – Present</span>
-                            <span class="activity__desc">Co-running a 10-week pilot program for about 25 prospective members, including a chapter history handbook, brother chats, and big-little matching.</span>
-                        </li>
-                        <li>
-                            <span class="activity__title">Peer Advisor</span>
-                            <span class="activity__org">APISAA Peer Advising Family Network, UVA</span>
-                            <span class="activity__date">Aug 2026 – Present</span>
-                            <span class="activity__desc">Mentoring first-year and transfer students through UVA's year-long advising program.</span>
-                        </li>
-                        <li>
-                            <span class="activity__title">Marketing and Merchandise Committee</span>
-                            <span class="activity__org">Engineering Student Council</span>
-                            <span class="activity__date">Sep 2025 – May 2026</span>
-                            <span class="activity__desc">Ran social media and visual branding outreach for events reaching approximately 5,000 students.</span>
-                        </li>
+                <li class="project project--featured" style="--c: var(--plum)">
+                    <div class="project__main">
+                        <p class="project__meta"><span class="project__num" aria-hidden="true">02</span><span>Analog · Featured</span></p>
+                        <h3 class="project__title">Audio Spectrum Analyzer</h3>
+                        <p class="project__context">Electronics · Solo project · Spring 2026</p>
+                        <ul class="tags" aria-label="Tools">
+                            <li>Analog circuits</li><li>Sallen-Key filters</li><li>Op-amps</li><li>KiCad SPICE</li><li>Python</li><li>Analog Discovery</li><li>Debugging</li>
+                        </ul>
+                    </div>
+                    <div class="project__side">
+                        <p class="project__desc">
+                            An analog board that splits music into bass and treble bands and drives
+                            LEDs to the beat. I picked the filter cutoffs from an FFT of sample audio,
+                            then built, tested, and debugged the board.
+                        </p>
+                        <dl class="stats">
+                            <div>
+                                <dt>Low-pass cutoff</dt>
+                                <dd>129.6 Hz</dd>
+                                <dd class="stats__note">125 Hz target, 123 Hz in SPICE</dd>
+                            </div>
+                            <div>
+                                <dt>High-pass cutoff</dt>
+                                <dd>859.9 Hz</dd>
+                                <dd class="stats__note">800 Hz target, 794 Hz in SPICE</dd>
+                            </div>
+                        </dl>
+                        <p class="project__links">
+                            <a class="btn" href="https://github.com/glyckz/Audio-Analyzer-Project" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                            <a class="btn" href="https://raw.githubusercontent.com/glyckz/Audio-Analyzer-Project/main/docs/Audio_Analyzer_Final_Report_Kasie_Nguyen.pdf"
+                               target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                        </p>
+                    </div>
+                </li>
+            </ol>
+
+            <ol class="grid" start="3">
+                <li class="project" style="--c: var(--sage)">
+                    <p class="project__meta"><span class="project__num" aria-hidden="true">03</span><span>Embedded</span></p>
+                    <h3 class="project__title">Embedded Music Player</h3>
+                    <p class="project__context">Embedded Systems · Partner project · Spring 2026</p>
+                    <ul class="tags" aria-label="Tools">
+                        <li>Embedded C</li><li>PWM</li><li>Interrupts</li><li>FSM</li><li>LCD</li><li>MKII BoosterPack</li>
                     </ul>
-                </div>
-            </div>
+                    <p class="project__desc">
+                        A microcontroller music player that plays “La Vie En Rose” on a
+                        PWM buzzer, shows the notes on an LCD, and uses interrupt-driven buttons
+                        to start, pause, and resume.
+                    </p>
+                    <p class="project__links">
+                        <a class="btn" href="https://github.com/glyckz/Embedded-C-Music-Player" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                        <a class="btn" href="https://raw.githubusercontent.com/glyckz/Embedded-C-Music-Player/main/docs/ECE3430_Final_Report.pdf"
+                           target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                    </p>
+                </li>
+
+                <li class="project" style="--c: var(--sky)">
+                    <p class="project__meta"><span class="project__num" aria-hidden="true">04</span><span>DSP</span></p>
+                    <h3 class="project__title">BEATS</h3>
+                    <p class="project__subtitle">Bandwidth Equalizer and Audio Transformer System</p>
+                    <p class="project__context">Signals and Systems · Team project · Spring 2026</p>
+                    <ul class="tags" aria-label="Tools">
+                        <li>Python</li><li>Google Colab</li><li>FFT</li><li>Audio visualization</li><li>Convolution</li>
+                    </ul>
+                    <p class="project__desc">
+                        A Python audio equalizer that lets you boost or cut bass, mids, and
+                        treble using the FFT. I added convolution reverb and before-and-after
+                        spectrum plots.
+                    </p>
+                    <p class="project__links">
+                        <a class="btn" href="https://github.com/glyckz/BEATS-Audio-Equalizer" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                    </p>
+                </li>
+
+                <li class="project" style="--c: var(--steel)">
+                    <p class="project__meta"><span class="project__num" aria-hidden="true">05</span><span>Software</span></p>
+                    <h3 class="project__title">Course Review CRUD App</h3>
+                    <p class="project__context">Software Development · Team project · Fall 2025</p>
+                    <ul class="tags" aria-label="Tools">
+                        <li>Java</li><li>JavaFX</li><li>SQLite (JDBC)</li>
+                    </ul>
+                    <p class="project__desc">
+                        A desktop app for searching and reviewing university courses. I built
+                        the database layer and helped with the interface.
+                    </p>
+                    <p class="project__links">
+                        <a class="btn" href="https://github.com/glyckz/CRUD-app-2025" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                    </p>
+                </li>
+
+                <li class="project" style="--c: var(--teal)">
+                    <p class="project__meta"><span class="project__num" aria-hidden="true">06</span><span>Digital logic</span></p>
+                    <h3 class="project__title">Simple CPU (VHDL)</h3>
+                    <p class="project__context">Digital Logic Design · Spring 2025</p>
+                    <ul class="tags" aria-label="Tools">
+                        <li>VHDL</li><li>Quartus II</li><li>ModelSim</li><li>CPU architecture</li>
+                    </ul>
+                    <p class="project__desc">
+                        An 8-bit CPU written in VHDL with its own small instruction set,
+                        verified in simulation with a ModelSim testbench.
+                    </p>
+                    <p class="project__links">
+                        <a class="btn" href="https://github.com/glyckz/simplecpuproject" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+                    </p>
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -234,186 +299,38 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
         <div class="container">
             <div class="section__head">
-                <p class="eyebrow">Projects</p>
-                <h2 class="section__title" id="projects-title">Selected work</h2>
+                <p class="eyebrow">Experience</p>
+                <h2 class="section__title" id="experience-title">Where I've worked</h2>
             </div>
 
-            <ol class="featured">
-                <li class="project project--featured" style="--c: var(--copper)">
-                    <div class="project__main">
-                        <p class="project__meta"><span class="project__num" aria-hidden="true">01</span><span>Hardware · Featured</span></p>
-                        <h3 class="project__title">Boost Converter PCB</h3>
-                        <p class="project__context">ECE 2300 (Applied Circuits) · Class project · Team of three · Oct–Dec 2025</p>
-                        <ul class="tags" aria-label="Tools">
-                            <li>KiCad</li><li>KiCad SPICE</li><li>PCB</li><li>PWM</li><li>555 timer</li><li>Oscilloscope testing</li>
-                        </ul>
+            <ol class="timeline">
+                <li class="role">
+                    <div class="role__head">
+                        <h3 class="role__title">Electrical Engineering Intern</h3>
+                        <span class="role__date">2026 – Present</span>
                     </div>
-                    <div class="project__side">
-                        <p class="project__desc">
-                            Designed a PWM-controlled DC–DC boost converter that steps a 5 V input
-                            up to 12 V. On a three-person team, I owned the PCB design in KiCad,
-                            analytical verification, KiCad SPICE simulation, and board assembly,
-                            placing all components myself. Before assembly I rechecked the team's
-                            555-timer component values and output-capacitor sizing for 1% ripple.
-                            The initial bring-up didn't work, so I debugged the board until it
-                            met spec, and documented its performance with oscilloscope testing and
-                            bench measurements.
-                        </p>
-                        <dl class="stats">
-                            <div>
-                                <dt>Output voltage</dt>
-                                <dd>11.57 V</dd>
-                                <dd class="stats__note">12 V target from 5 V in, within 3.6%</dd>
-                            </div>
-                            <div>
-                                <dt>PWM frequency</dt>
-                                <dd>500.06 Hz</dd>
-                                <dd class="stats__note">500 Hz target, within 0.02%</dd>
-                            </div>
-                        </dl>
-                        <p class="project__links">
-                            <a class="btn" href="https://github.com/glyckz/boost-converter-project" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                            <a class="btn" href="https://raw.githubusercontent.com/glyckz/boost-converter-project/main/docs/boost-converter-final-report.pdf"
-                               target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                        </p>
+                    <p class="role__org">Jerico Technologies</p>
+                    <p class="role__desc">Building a modular ESP32 weather station, from sensor bring-up to firmware and client documentation.</p>
+                </li>
+                <li class="role">
+                    <div class="role__head">
+                        <h3 class="role__title">Technology Developer Intern</h3>
+                        <span class="role__date">Summer 2026</span>
                     </div>
+                    <p class="role__org">UVA i.Lab Incubator</p>
+                    <p class="role__desc">Worked on product and technology with two early-stage ventures.</p>
                 </li>
-
-                <li class="project project--featured" style="--c: var(--plum)">
-                    <div class="project__main">
-                        <p class="project__meta"><span class="project__num" aria-hidden="true">02</span><span>Analog · Featured</span></p>
-                        <h3 class="project__title">Audio Spectrum Analyzer</h3>
-                        <p class="project__context">ECE 2600 (Electronics) · Solo project · Jan–May 2026</p>
-                        <ul class="tags" aria-label="Tools">
-                            <li>Analog circuits</li><li>Sallen-Key filters</li><li>Op-amps</li><li>KiCad SPICE</li><li>Python</li><li>Analog Discovery</li><li>Debugging</li>
-                        </ul>
+                <li class="role">
+                    <div class="role__head">
+                        <h3 class="role__title">Teaching Assistant</h3>
+                        <span class="role__date">2025 – Present</span>
                     </div>
-                    <div class="project__side">
-                        <p class="project__desc">
-                            Built and tested a provided 9 V analog board that mixes stereo input,
-                            separates the signal into low- and high-frequency bands with
-                            Sallen-Key filters, and drives LEDs using peak detection, PWM, and
-                            MOSFET driver circuits. I picked the 125 Hz low-pass and 800 Hz
-                            high-pass targets from a Python FFT analysis of sample audio, then
-                            chose component values with a second script that searched the lab
-                            kit's E12 resistor values. The board came up dead; I debugged it and
-                            traced the fault to an issue in the PMOS reverse-polarity circuit.
-                        </p>
-                        <dl class="stats">
-                            <div>
-                                <dt>Low-pass cutoff</dt>
-                                <dd>129.6 Hz</dd>
-                                <dd class="stats__note">125 Hz target, 123 Hz in SPICE</dd>
-                            </div>
-                            <div>
-                                <dt>High-pass cutoff</dt>
-                                <dd>859.9 Hz</dd>
-                                <dd class="stats__note">800 Hz target, 794 Hz in SPICE</dd>
-                            </div>
-                        </dl>
-                        <p class="project__links">
-                            <a class="btn" href="https://github.com/glyckz/Audio-Analyzer-Project" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                            <a class="btn" href="https://raw.githubusercontent.com/glyckz/Audio-Analyzer-Project/main/docs/Audio_Analyzer_Final_Report_Kasie_Nguyen.pdf"
-                               target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                        </p>
-                    </div>
-                </li>
-            </ol>
-
-            <ol class="grid" start="3">
-                <li class="project" style="--c: var(--sage)">
-                    <p class="project__meta"><span class="project__num" aria-hidden="true">03</span><span>Embedded</span></p>
-                    <h3 class="project__title">Embedded Music Player</h3>
-                    <p class="project__context">ECE 3430 (Introduction to Embedded Computer Systems) · With a partner · Apr–May 2026</p>
-                    <ul class="tags" aria-label="Tools">
-                        <li>Embedded C</li><li>PWM</li><li>Interrupts</li><li>FSM</li><li>LCD</li><li>MKII BoosterPack</li>
-                    </ul>
-                    <p class="project__desc">
-                        Developed an embedded music player on the TI MSPM0G3507 LaunchPad and
-                        MKII Educational BoosterPack that plays “La Vie En Rose” through a
-                        PWM-controlled buzzer, displays note labels on the LCD, and uses
-                        interrupt-driven pushbuttons for start, pause, and resume control.
-                    </p>
-                    <p class="project__desc">
-                        Melody frequencies are converted into PWM timer periods, and a two-state
-                        FSM runs off edge-triggered GPIO interrupts. Reconfiguring interrupt
-                        polarity mid-handler makes each press-and-release count exactly once,
-                        and chunking note delays into 5 ms polling intervals keeps pause
-                        responsive mid-note.
-                    </p>
-                    <p class="project__links">
-                        <a class="btn" href="https://github.com/glyckz/Embedded-C-Music-Player" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                        <a class="btn" href="https://raw.githubusercontent.com/glyckz/Embedded-C-Music-Player/main/docs/ECE3430_Final_Report.pdf"
-                           target="_blank" rel="noopener noreferrer">Final report (PDF) <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                    </p>
-                </li>
-
-                <li class="project" style="--c: var(--sky)">
-                    <p class="project__meta"><span class="project__num" aria-hidden="true">04</span><span>DSP</span></p>
-                    <h3 class="project__title">BEATS</h3>
-                    <p class="project__subtitle">Bandwidth Equalizer and Audio Transformer System</p>
-                    <p class="project__context">ECE 2700 (Signals and Systems) · Team of four · Apr 2026</p>
-                    <ul class="tags" aria-label="Tools">
-                        <li>Python</li><li>Google Colab</li><li>FFT</li><li>Audio visualization</li><li>Convolution</li>
-                    </ul>
-                    <p class="project__desc">
-                        An audio equalizer that splits an audio file into short segments
-                        (1024-sample Hanning windows), applies the Fourier transform to each
-                        segment, and lets the user boost or cut bass, mids, and treble before
-                        rebuilding the output file with 512-sample overlap-add.
-                    </p>
-                    <p class="project__desc">
-                        <strong class="project__mine">My part:</strong> implemented convolution
-                        reverb using frequency-domain multiplication, added before-and-after
-                        spectral comparison plots, and built the generator that exports a PDF
-                        summary of the parameters used.
-                    </p>
-                    <p class="project__links">
-                        <a class="btn" href="https://github.com/glyckz/BEATS-Audio-Equalizer" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                    </p>
-                </li>
-
-                <li class="project" style="--c: var(--steel)">
-                    <p class="project__meta"><span class="project__num" aria-hidden="true">05</span><span>Software</span></p>
-                    <h3 class="project__title">Course Review CRUD App</h3>
-                    <p class="project__context">CS 3140 (Software Development Essentials) · Team of three · Dec 2025</p>
-                    <ul class="tags" aria-label="Tools">
-                        <li>Java</li><li>JavaFX</li><li>SQLite (JDBC)</li>
-                    </ul>
-                    <p class="project__desc">
-                        A five-screen JavaFX course review app (Login, Create Account, Search,
-                        Reviews, My Reviews). I owned the data layer: SQLite schema setup and
-                        JDBC connection management behind a DAO interface, with unique
-                        usernames and one review per user per course enforced at the schema
-                        level. I also contributed JavaFX view layouts and custom CSS.
-                    </p>
-                    <p class="project__links">
-                        <a class="btn" href="https://github.com/glyckz/CRUD-app-2025" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                    </p>
-                </li>
-
-                <li class="project" style="--c: var(--teal)">
-                    <p class="project__meta"><span class="project__num" aria-hidden="true">06</span><span>Digital logic</span></p>
-                    <h3 class="project__title">Simple CPU (VHDL)</h3>
-                    <p class="project__context">ECE 2330 (Digital Logic Design) · Jan–May 2025</p>
-                    <ul class="tags" aria-label="Tools">
-                        <li>VHDL</li><li>Quartus II</li><li>ModelSim</li><li>CPU architecture</li>
-                    </ul>
-                    <p class="project__desc">
-                        Implemented an 8-bit simple CPU in VHDL with an 8-instruction ISA,
-                        datapath, ALU, program counter, opcode decode, and fetch/execute
-                        control sequencing. Built a ModelSim testbench to verify instruction
-                        sequencing and memory read/write behavior against an EEPROM-style
-                        program file, debugging the control and datapath logic through
-                        waveform analysis.
-                    </p>
-                    <p class="project__links">
-                        <a class="btn" href="https://github.com/glyckz/simplecpuproject" target="_blank" rel="noopener noreferrer">Repo <span class="btn__arrow" aria-hidden="true">↗</span></a>
-                    </p>
+                    <p class="role__org">University of Virginia</p>
+                    <p class="role__desc">Helping students work through Ordinary Differential Equations.</p>
                 </li>
             </ol>
         </div>
